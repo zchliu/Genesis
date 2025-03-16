@@ -29,14 +29,6 @@ scene = gs.Scene(
     renderer = gs.renderers.Rasterizer(),
 )
 
-cam = scene.add_camera(
-    res    = (640, 480),
-    pos    = (3.5, 0.0, 2.5),
-    lookat = (0, 0, 0.5),
-    fov    = 30,
-    GUI    = False,
-)
-
 ########################## 实体 ##########################
 plane = scene.add_entity(
     gs.morphs.Plane(),
@@ -46,6 +38,15 @@ franka = scene.add_entity(
         file  = 'xml/franka_emika_panda/panda.xml',
     ),
 )
+
+cam = scene.add_camera(
+    res    = (640, 480),
+    pos    = (3.5, 0.0, 2.5),
+    lookat = (0, 0, 0.5),
+    fov    = 30,
+    GUI    = False,
+)
+
 ########################## 构建 ##########################
 scene.build()
 
