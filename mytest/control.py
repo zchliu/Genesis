@@ -45,6 +45,8 @@ jnt_names = [
 ]
 dofs_idx = [franka.get_joint(name).dof_idx_local for name in jnt_names]
 
+
+cam.start_recording()
 ############ 可选：设置控制增益 ############
 # 设置位置增益
 franka.set_dofs_kp(
@@ -113,3 +115,5 @@ for i in range(1250):
     print('内部力:', franka.get_dofs_force(dofs_idx))
 
     scene.step()
+
+cam.stop_recording(save_to_filename='video.mp4', fps=60)
