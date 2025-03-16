@@ -17,7 +17,7 @@ scene = gs.Scene(
     sim_options = gs.options.SimOptions(
         dt = 0.01,
     ),
-    show_viewer = False,
+    show_viewer = True,
     vis_options = gs.options.VisOptions(
         show_world_frame = True,
         world_frame_size = 1.0,
