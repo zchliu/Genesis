@@ -116,4 +116,4 @@ for i in range(1250):
 
     scene.step()
 
-cam.stop_recording(save_to_filename='video.mp4', fps=60)
+cam.stop_recording(save_to_filename='control.mp4', fps=60)
